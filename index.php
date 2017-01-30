@@ -2,14 +2,14 @@
 <html lang="fr">
 <?php include_once("head.php"); ?>
 <?php require_once("admin/connexionBDD.php"); ?>
-<body>
+<body class="container col col-xs-12">
 	<?php include('header.php');
 
 	$donnees = $conn->prepare("SELECT * FROM produits");
 	$donnees->execute();
 	$res = $donnees->fetchAll();
 
-	
+
 	//condition pour afficher ou non le slider
 	if (isset($_POST['id'])) {
 		$idTemp = $_POST['id'] - 1;
@@ -40,13 +40,13 @@
 				//si on a un POST on regarde le param
 				if(isset($_POST['id'])){
 					//si ça match on n'affiche pas le produit dans la liste
-					if($_POST['id'] == $value['id_fromage']){/* rien */} 
+					if($_POST['id'] == $value['id_fromage']){/* rien */}
 					else if($value['supp']) {/* rien */}
 					else if($cat == $value['categorie']){echo $produit;}
-	
+
 				// on affiche tous les produits par default
 				} else if (!isset($_POST['id'])){
-					if($value['supp']) {/* rien */} 
+					if($value['supp']) {/* rien */}
 					else if($cat == $value['categorie']){echo $produit;}
 				}
 			}

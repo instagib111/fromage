@@ -1,2 +1,40 @@
 body {
-  background-color: #B15921; }
+
+}
+/**************/
+/*** HEADER ***/
+/**************/
+#baniere{
+  margin-bottom: -50px;
+}
+#titre{
+  text-align: center;
+  position: relative;
+  top: -100px;
+  color: cornsilk;
+}
+#lnk_titre{
+  color: cornsilk;
+}
+#fb{
+  float: right;
+  position: relative;
+  left: -10px;
+}
+#nav{
+  margin-top: -20px;
+  height: 30px;
+}
+.cat{
+  font-size: 19px;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+.cat:hover{
+  background-color: rgba(100,100,100,0.5);
+}
+/*** FIN HEADER ***/
