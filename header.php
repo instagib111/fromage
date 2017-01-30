@@ -1,6 +1,6 @@
 <div id="container">
 <header class="row">
-	<div class="col-12" id="baniere">
+	<div class="" id="baniere">
 		<a id="lnk_titre" href="/FromageE-commerce/index">
 			<img class="ban center-block" src="http://www.scout-eea.org/wp-content/themes/scout-eea/images/headers/eea16.jpg" alt="banière" />
 			<h1 id="titre">Tout est bon dans le <i>Frometon</i>
@@ -11,12 +11,12 @@
 		</a>
 	</div>
 	<nav class="">
-		<ul class="nav navbar-nav col-xs-push-2 col-xs-9" id="nav">
-			<li id="lVache" data-value="1" class="cat col-xs-2">Lait de vache</li>
-			<li id="lChevre" data-value="2" class="cat col-xs-2">Lait de chèvre</li>
-			<li id="lBrebis" data-value="3" class="cat col-xs-2">Lait de brebis</li>
-			<li id="vins" data-value="4" class="cat col-xs-2">Vins</li>
-			<li id="plateaux" data-value="5" class="cat col-xs-2">Plateaux</li>
+		<ul class="nav navbar-nav col-md-push-2 col-md-9 col-push-xs-0 col-xs-12" id="nav">
+			<li id="lVache" data-value="1" class="cat col-md-2 col-xs-3">Lait de vache</li>
+			<li id="lChevre" data-value="2" class="cat col-md-2 col-xs-3">Lait de chèvre</li>
+			<li id="lBrebis" data-value="3" class="cat col-md-2 col-xs-3">Lait de brebis</li>
+			<li id="vins" data-value="4" class="cat col-md-2 col-xs-2">Vins</li>
+			<li id="plateaux" data-value="5" class="cat col-md-2 col-xs-2">Plateaux</li>
 		</ul>
 	</nav>
 </header>
