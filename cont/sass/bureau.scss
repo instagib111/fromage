@@ -1,0 +1,148 @@
+$w-main : 960px;
+$w-nav : 700px;
+$w-sarticle : 706px;
+$w-saside : 250px;
+$fs-nav : 28px;
+$h-section : 720px;
+$carrTop : 300px;
+
+body{
+	div#container{
+		width: $w-main;
+		margin: 0 auto;
+		header{
+			div#baniere{
+				height: 150px;
+				width: $w-main;
+			}
+			nav {
+				height: 10px;
+				width: $w-main;
+				ul{
+					margin: auto;
+					width: $w-nav;
+					li{
+						width: 19%;
+						height: 100%;
+						a{
+							font-size: $fs-nav;
+
+						}
+					}
+				}
+			}
+		}
+		div#caroussel{
+			height: $carrTop;
+			margin-bottom: 10px;
+		}
+		article#topArticle{
+			height: $carrTop;
+			img{
+
+				width: 340px;
+				height: 280px;
+				margin: 10px 10px 5px 90px;
+			}
+			div{
+					position: relative;
+					top: -280px;
+					left: 460px;
+					width: 260px;
+					height: 265px;
+				h2{
+					text-align: center;
+					margin-top: 10px;
+					font-size: 20pt;
+				}	
+				p{
+					margin-top: 40px;
+				}
+			}
+			form{	
+				position: relative;
+				top: -540px;
+				left: 740px;
+				width: 200px;
+				height: 167px;
+				padding: 25px 0;
+				text-align: center;
+				fieldset{
+					#lbQuantite{
+						text-align: left;
+						margin-bottom: 15px;
+					}
+					select#quantite{
+						margin-left: 40px;
+						margin-bottom: 15px;
+	   					width:55px;
+					}
+					#lbPoids{
+						text-align: left;
+						margin-bottom: 15px;
+					}
+					#poids{
+						margin-left: 62px;
+						margin-bottom: 15px;
+					}
+					h5{
+						margin-bottom: 15px;
+						span{
+							margin-left: 66px;
+						}
+					}
+					input#sub{
+						background-color: #4CAF50;
+						border: none;
+						color: #FFFFFF;
+						padding: 15px 32px;
+						text-align: center;
+						margin: 10px 0;
+						text-decoration: none;
+						font-size: 16px;
+						border-radius: 2px;
+						cursor: pointer;
+					}
+				}
+			}	
+		}
+		section#secAside{
+			width: $w-saside;
+			//height: $h-section;
+			aside{
+				ul{
+					li.cat{
+						text-align: left;
+						ul.souscat{
+							li{
+
+							}
+						}
+					}
+				}
+			}
+		}
+		section#secArticle{
+			width: $w-sarticle;
+			//height: $h-section;
+			article{
+				height: 210px;
+				width: 255px;
+				margin: 0 50px 30px 40px;
+				img{
+					height: 180px;	
+					width: 255px;		
+				}
+				div.nomPrix{
+					width: 100%;
+					h2{
+
+					}
+				}
+			}
+		}
+		footer{
+			height: 100px;
+		}
+	}
+}

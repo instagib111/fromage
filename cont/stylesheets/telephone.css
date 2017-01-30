@@ -1,0 +1,127 @@
+body div#container {
+  width: 100%;
+  margin: 0 auto; }
+  body div#container header div#baniere {
+    height: 150px;
+    width: 100%; }
+  body div#container header nav {
+    height: 10px;
+    width: 100%; }
+    body div#container header nav ul {
+      margin: auto;
+      width: 100%; }
+      body div#container header nav ul li {
+        width: 19%;
+        height: 100%; }
+        body div#container header nav ul li a {
+          font-size: 28px; }
+  body div#container div#caroussel {
+    display: none; }
+  body div#container article#topArticle img {
+    width: 340px;
+    height: 280px;
+    margin: 10px auto; }
+  body div#container article#topArticle div {
+    display: inline-block;
+    width: 260px;
+    height: 265px; }
+    body div#container article#topArticle div h2 {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 20pt; }
+    body div#container article#topArticle div p {
+      margin-top: 40px; }
+  body div#container article#topArticle form {
+    display: inline-block;
+    width: 200px;
+    height: 167px;
+    padding: 25px 0;
+    text-align: center; }
+    body div#container article#topArticle form fieldset #lbQuantite {
+      text-align: left;
+      margin-bottom: 15px; }
+    body div#container article#topArticle form fieldset select#quantite {
+      margin-left: 40px;
+      margin-bottom: 15px;
+      width: 55px; }
+    body div#container article#topArticle form fieldset #lbPoids {
+      text-align: left;
+      margin-bottom: 15px; }
+    body div#container article#topArticle form fieldset #poids {
+      margin-left: 62px;
+      margin-bottom: 15px; }
+    body div#container article#topArticle form fieldset h5 {
+      margin-bottom: 15px; }
+      body div#container article#topArticle form fieldset h5 span {
+        margin-left: 66px; }
+    body div#container article#topArticle form fieldset input#sub {
+      background-color: #4CAF50;
+      border: none;
+      color: #FFFFFF;
+      padding: 15px 32px;
+      text-align: center;
+      margin: 10px 0;
+      text-decoration: none;
+      font-size: 16px;
+      border-radius: 2px;
+      cursor: pointer; }
+  body div#container aside#panier {
+    max-width: 550px; }
+  body div#container div.dPanier {
+    margin: 0 !important;
+    padding-bottom: 15px !important;
+    width: 100% !important; }
+    body div#container div.dPanier img {
+      width: 71px !important;
+      height: 50px !important;
+      margin: 0 !important; }
+    body div#container div.dPanier h4 {
+      width: 100% !important;
+      margin-top: 20px !important; }
+    body div#container div.dPanier form {
+      float: right !important; }
+      body div#container div.dPanier form button {
+        padding: 0 !important; }
+    body div#container div.dPanier div {
+      width: 250px !important;
+      height: 50px; }
+      body div#container div.dPanier div .quantitePanier {
+        width: 175px !important; }
+      body div#container div.dPanier div .poidsPanier {
+        width: 182px !important; }
+      body div#container div.dPanier div .prixPanier {
+        width: 207px !important; }
+  body div#container form button#btnEffacerPanier {
+    margin: 0 !important; }
+  body div#container div.Totaux {
+    margin-left: 0 !important; }
+  body div#container form#formu div {
+    width: 100%;
+    margin-left: 0 !important; }
+  body div#container form#formu button {
+    margin: 0; }
+  body div#container #infos {
+    margin: 0 !important;
+    width: 100% !important; }
+  body div#container #paypal button {
+    margin: 0 !important; }
+  body div#container form#before button {
+    top: 0 !important;
+    left: 0 !important; }
+  body div#container section#secAside {
+    width: 100%; }
+    body div#container section#secAside aside ul li.cat {
+      text-align: left; }
+  body div#container section#secArticle {
+    width: 100%; }
+    body div#container section#secArticle article {
+      height: 210px;
+      width: 255px;
+      margin: 0 50px 30px 40px; }
+      body div#container section#secArticle article img {
+        height: 180px;
+        width: 255px; }
+      body div#container section#secArticle article div.nomPrix {
+        width: 100%; }
+  body div#container footer {
+    height: 100px; }

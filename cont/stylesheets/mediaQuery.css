@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+/* Importation des CSS pour tous les supports : */
+@import url("commun.css");
+
+/* Importation des CSS pour les téléphones et tab : */
+@import url("telephone.css") only screen and (max-width: 1000px);
+
+/* Importation des CSS pour les ordinateurs : */
+@import url("bureau.css") only screen and (min-width :1001px);
+
+/* Importation des CSS pour l'impression : */
+@import url("imprimante.css") only print;
