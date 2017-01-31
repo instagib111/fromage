@@ -4,12 +4,16 @@ body html{
 #container{
   background-color: antiquewhite;
 }
+.row{
+  margin: 0;
+}
 /**************/
 /*** HEADER ***/
 /**************/
 #header{
 }
 #baniere{
+  overflow: hidden;
 }
 #titre{
   text-align: center;
@@ -23,8 +27,6 @@ body html{
 }
 #fb{
   float: right;
-  position: relative;
-  left: -30px;
   margin-bottom: -30px;
 }
 #nav{
@@ -46,8 +48,39 @@ body html{
 }
 /*** FIN HEADER ***/
 
+/*************/
+/*** ASIDE ***/
+/*************/
+#lblTitrePanier{
+  text-align: center;
+}
+.imgPan{
+  height: 50px;
+  width: 65px;
+  padding: 0;
+  margin: 0;
+}
+.lblTitreProduitPanier{
+  text-align: center;
+}
+.btnDelete{
+  float: right;
+}
+.infoPan{
+  text-align: center;
+}
+/*** FIN SECTION ***/
 
-/**************/
-/*** SLIDER ***/
-/**************/
-/*** FIN SLIDER ***/
+/***************/
+/*** SECTION ***/
+/***************/
+.img_expo{
+  width: 100%;
+}
+.articles{
+  cursor: pointer;
+  background: papayawhip;
+  margin: 0px;
+  padding: 5px;
+}
+/*** FIN SECTION ***/

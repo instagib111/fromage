@@ -20,7 +20,7 @@
 
 	//AFFICHAGE DES PRODUITS
 	?>
-		<section id="secArticle">
+		<section id="secArticle" class="row">
 			<?php
 			if(!isset($_POST['cat'])){ $cat = "lait de vache";}
 			else if($_POST['cat'] == 1) { $cat = "lait de vache";}
@@ -30,8 +30,8 @@
 			else if($_POST['cat'] == 5) { $cat = "plateaux";}
 
 			foreach ($res as $key => $value) {
-				$produit = "<article class='articles' data-valeur='". $value['id_fromage'] ."'>
-							<img src='" . $value['image'] . "' alt='". $value["nom"] ."' />";
+				$produit = "<article class='articles col-md-4 col-xs-6' data-valeur='". $value['id_fromage'] ."'>
+							<img class='img_expo' src='" . $value['image'] . "' alt='". $value["nom"] ."' />";
 				$produit .= "<div class='nomPrix'><h2 class='nomfrom'>". $value['nom'] ."</h2>
 							<div class='prix'>". number_format($value['prixKg'], 2) ."€/Kg</div></div>";
 				$produit .= "</article>";
