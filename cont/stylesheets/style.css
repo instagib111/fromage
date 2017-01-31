@@ -1,20 +1,22 @@
 body html{
   background-color: antiquewhite;
 }
-.container{
+#container{
   background-color: antiquewhite;
 }
 /**************/
 /*** HEADER ***/
 /**************/
+#header{
+}
 #baniere{
-  margin-bottom: -50px;
 }
 #titre{
   text-align: center;
   position: relative;
   top: -100px;
   color: cornsilk;
+  margin-bottom: -40px;
 }
 #lnk_titre{
   color: cornsilk;
@@ -22,7 +24,8 @@ body html{
 #fb{
   float: right;
   position: relative;
-  left: -10px;
+  left: -30px;
+  margin-bottom: -30px;
 }
 #nav{
   margin-top: -20px;
@@ -36,8 +39,15 @@ body html{
   -moz-transition: all 0.1s ease-in-out;
   -o-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
+  height: 100%;
 }
 .cat:hover{
   background-color: rgba(100,100,100,0.3);
 }
 /*** FIN HEADER ***/
+
+
+/**************/
+/*** SLIDER ***/
+/**************/
+/*** FIN SLIDER ***/

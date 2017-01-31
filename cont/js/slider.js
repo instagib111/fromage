@@ -3,7 +3,7 @@ jQuery(document).ready(function ($) {
 	var slideWidth = $('#slider ul li').width();
 	var slideHeight = $('#slider ul li').height();
 	var sliderUlWidth = slideCount * slideWidth;
-	
+
 	$('#slider').css({ width: slideWidth, height: slideHeight });
 	$('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
     $('#slider ul li:last-child').prependTo('#slider ul');
@@ -30,13 +30,13 @@ jQuery(document).ready(function ($) {
         moveRight();
     });
 
-    setInterval(moveRight, 5000);
+    //setInterval(moveRight, 5000);
 
     $(".lnkSlider").click(function(event) {
-        console.log('hello');
+        //console.log('hello');
         var v = $(this).data('value');
         $('#hiddenAttr').val(v);
         $("#hiddenForm").submit();
     });
 
-});    
+});

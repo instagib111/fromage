@@ -14,7 +14,7 @@
 					<button id="btnRetirerPanier" class="glyphicon glyphicon-remove"></button>
 				</form>
 				<img class="imgPan" src="<?php echo $value['image']; ?>" alt="<?php echo $value['nom']; ?>" />
-				<div>	
+				<div>
 
 					<span>Quantité :<span class="quantitePanier"><?php echo $value['quantite']; ?></span></span><br />
 					<span>Poids :<span class="poidsPanier"><?php echo $value['poids'] * 1000; ?>g</span></span><br />
@@ -34,14 +34,14 @@
 	</aside>
 <?php } //endif ?>
 	<aside>
-		<ul>
+		<!--<ul>
 			<h3>O FROMAGES ET VINS I</h3>
 			<li id="lVache" data-value="1" class="cat">Lait de vache</li>
 			<li id="lChevre" data-value="2" class="cat">Lait de chèvre</li>
 			<li id="lBrebis" data-value="3" class="cat">Lait de brebis</li>
 			<li id="vins" data-value="4" class="cat">Vins</li>
 			<li id="plateaux" data-value="5" class="cat">Plateaux</li>
-		</ul>
+		</ul>-->
 	</aside>
 	<form id="asideHiddenForm" action="" method="post">
 		<input type="hidden" name="cat" id="asideHiddenInput" />

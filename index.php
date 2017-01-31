@@ -2,7 +2,7 @@
 <html lang="fr">
 <?php include_once("head.php"); ?>
 <?php require_once("admin/connexionBDD.php"); ?>
-<body class="container col col-xs-12">
+<body>
 	<?php include('header.php');
 
 	$donnees = $conn->prepare("SELECT * FROM produits");

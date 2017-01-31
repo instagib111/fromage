@@ -1,9 +1,9 @@
 <?php  ?>
-<div id="caroussel">
+<div id="caroussel" class="row hidden-sm hidden-xs">
 	<div id="slider">
 		<a href="#" class="control_next">></a>
 		<a href="#" class="control_prev"><</a>
-		<ul>
+		<ul id="listSlider">
 			<?php
 
 			$d = $conn->prepare("SELECT id_fromage, image, description, nom FROM produits WHERE slider = 1");
@@ -12,7 +12,13 @@
 
 			foreach ($r as $key => $value) {
 				echo "<li class='lnkSlider' data-value='". $value['id_fromage'] ."' >
-				<img src='" . $value['image'] . "' alt='". $value['nom'] ."'/><div><h3>".$value['nom']."</h3><span class='text'>". $value['description'] ."</span><span></span></div></li>";
+								<img src='" . $value['image'] . "' alt='". $value['nom'] ."'/>
+								<div>
+									<h3>".$value['nom']."</h3>
+									<span class='text'>". $value['description'] ."</span>
+									<span></span>
+								</div>
+							</li>";
 			}
 
 			?>
