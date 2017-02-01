@@ -30,7 +30,7 @@ jQuery(document).ready(function ($) {
         moveRight();
     });
 
-    //setInterval(moveRight, 5000);
+    setInterval(moveRight, 7000);
 
     $(".lnkSlider").click(function(event) {
         //console.log('hello');

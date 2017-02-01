@@ -4,9 +4,32 @@ body html{
 #container{
   background-color: antiquewhite;
 }
+.tar{
+  text-align: right;
+}
+.tal{
+  text-align: left;
+}
+.p0{
+  padding: 0;
+}
+.m0{
+  margin: 0;
+}
+/*****************/
+/*** BOOTSTRAP ***/
+/*****************/
 .row{
   margin: 0;
 }
+.btn{
+  padding: 0px 5px;
+}
+.btn-success{
+  font-weight: bold;
+}
+/*** BOOTSTRAP ***/
+
 /**************/
 /*** HEADER ***/
 /**************/
@@ -22,7 +45,7 @@ body html{
   color: cornsilk;
   margin-bottom: -40px;
 }
-#lnk_titre{
+#lnkTitre{
   color: cornsilk;
 }
 #fb{
@@ -51,14 +74,58 @@ body html{
 /*************/
 /*** ASIDE ***/
 /*************/
+
+/* top article */
+#topArticle{
+  padding: 5px;
+  background: #fce7b0;
+  text-align: center;
+}
+#imgTopArticle{
+  max-height: 220px;
+  max-width: 100%;
+  padding: 4px;
+  line-height: 1.42857143;
+  background-color: #ffffd9;
+  border: 1px solid #e9e899;
+}
+#lblDescription{
+  text-align: justify;
+}
+#lblTitreDescription{
+  margin: 10px 0;
+}
+.formTopArticle{
+  padding: 7px 4px;
+  line-height: 1.42857143;
+  background-color: #ffffd9;
+  border: 1px solid #e9e899;
+}
+#prixTTC{
+  margin: 7px 0;
+}
+/* fin top article */
+#panier{
+  background: #fbeecc;
+}
+.dPanier{
+  background: #fbeecc;
+}
+.childDPanier{
+  margin: 5px;
+  background: #fce7b0;
+}
 #lblTitrePanier{
   text-align: center;
 }
 .imgPan{
-  height: 50px;
-  width: 65px;
-  padding: 0;
+  height: 54px;
+  width: 69px;
   margin: 0;
+  padding: 4px;
+  line-height: 1.42857143;
+  background-color: #ffffd9;
+  border: 1px solid #e9e899;
 }
 .lblTitreProduitPanier{
   text-align: center;
@@ -68,6 +135,9 @@ body html{
 }
 .infoPan{
   text-align: center;
+}
+.infos{
+  padding: 0 0 4px 0px;
 }
 /*** FIN SECTION ***/
 
@@ -82,16 +152,34 @@ body html{
   height: 200px;
   text-align: center;
 }
+.childArticles{
+  height: 100%;
+  padding: 0;
+  margin: 5px;
+  background-color: #fce7b0;
+}
 .img_expo{
-  height: 70%;
+  height: 77%;
   margin: 5px 0 15px;
+  padding: 4px;
+  line-height: 1.42857143;
+  background-color: #ffffd9;
+  border: 1px solid #e9e899;
 }
 .nomfrom{
   margin: 0;
-  padding: 0;
+  padding: 0 0 0 3px;
   font-size: 22px;
+  text-align: left;
+}
+.nomPrix{
+  padding: 0;
+  background: #fef4d3;
 }
 .prix{
-  padding: 2px 0;
+  padding: 2px 4px 2px 0px;
+}
+.centered{
+  margin: 0 auto;
 }
 /*** FIN SECTION ***/
