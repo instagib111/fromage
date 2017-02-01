@@ -30,10 +30,10 @@
 			else if($_POST['cat'] == 5) { $cat = "plateaux";}
 
 			foreach ($res as $key => $value) {
-				$produit = "<article class='articles col-md-4 col-xs-6' data-valeur='". $value['id_fromage'] ."'>
+				$produit = "<article class='articles col-lg-3 col-sm-4 col-xs-6' data-valeur='". $value['id_fromage'] ."'>
 							<img class='img_expo' src='" . $value['image'] . "' alt='". $value["nom"] ."' />";
-				$produit .= "<div class='nomPrix'><h2 class='nomfrom'>". $value['nom'] ."</h2>
-							<div class='prix'>". number_format($value['prixKg'], 2) ."€/Kg</div></div>";
+				$produit .= "<div class='nomPrix'><h2 class='nomfrom col-xs-9'>". $value['nom'] ."</h2>
+							<div class='prix col-xs-3'>". number_format($value['prixKg'], 2) ." €/Kg</div></div>";
 				$produit .= "</article>";
 
 				//var_dump($cat == $value['categorie']);

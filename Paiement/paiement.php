@@ -15,7 +15,7 @@
 	<?php foreach ($_POST as $key => $value) {
 		$_SESSION[$key] = $value;
 		//echo "<div id='".$key."' class='donnees'>".$value."</div>";
-	} 
+	}
 	$_SESSION["unconfirm"] = 1;
 	if($_SESSION["email"] != $_SESSION["confirm"]){// si la confirmation d'email est fausse
 		$_SESSION["unconfirm"] = 2;
@@ -44,7 +44,7 @@
 				$_SESSION["villeL"] = $_POST["villeF"];
 				$_SESSION["paysL"] = $_POST["paysF"];
 			} ?>
-			Prix Total TTC: <?php echo number_format($_SESSION["prixTotal"], 2); ?> € 
+			Prix Total TTC: <?php echo number_format($_SESSION["prixTotal"], 2); ?> €
 		</div>
 
 	<form id="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
@@ -52,8 +52,8 @@
 		<input name="amount" type="hidden" value="<?php echo $_SESSION['prixTotal'] ?>" />
 		<input name="currency_code" type="hidden" value="EUR" />
 		<input name="shipping" type="hidden" value="0.00" />
-		<input name="return" type="hidden" value="/FromageE-commerce/Paiement/confPaypal" /><!-- si bien payé -->
-		<input name="cancel_return" type="hidden" value="/FromageE-commerce/" /> <!-- si cancel-->
+		<input name="return" type="hidden" value="<?php echo $BASE_URL ?>Paiement/confPaypal" /><!-- si bien payé -->
+		<input name="cancel_return" type="hidden" value="<?php echo $BASE_URL ?>" /> <!-- si cancel-->
 		<input name="business" type="hidden" value="achard.christopher-facilitator@gmail.com" />
 		<input name="item_name" type="hidden" value="Votre panier" />
 		<input name="lc" type="hidden" value="FR" />
@@ -65,7 +65,7 @@
 		<input name="first_name" type="hidden" value="<?php echo $_POST["prenom"]; ?>">
 		<input name="last_name" type="hidden" value="<?php echo $_POST["nom"]; ?>">
 		<input type='hidden' name='bn' value='PP-BuyNowBF'>
-		
+
 		<button>Payer avec PayPal</button>
 	</form>
 	<form id="before" action="coordonnees" methode="post">
@@ -74,7 +74,7 @@
 
 
 <?php }//end else
-	} //end if 
+	} //end if
 	else {
 		header('Location: ../index');
 	die();

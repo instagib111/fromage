@@ -1,11 +1,11 @@
 <div id="container">
 <header id="header" class="row">
 	<div class="" id="baniere">
-		<a id="lnk_titre" href="/FromageE-commerce/index">
+		<a id="lnk_titre" href="<?php echo $BASE_URL ?>">
 			<img class="ban center-block" src="http://www.scout-eea.org/wp-content/themes/scout-eea/images/headers/eea16.jpg" alt="banière" />
 			<h1 id="titre" class="col-md-push-2 col-md-9">Tout est bon dans le <i>Frometon</i>
 			<a id="fb" target="_blank" href="https://www.facebook.com/La-Fromagerie-1517997551795188/?fref=ts">
-				<img src="/FromageE-commerce/cont/icon/facebook.png" alt="fB">
+				<img src="<?php echo $BASE_URL ?>cont/icon/facebook.png" alt="fB">
 			</a>
 		</h1>
 		</a>

@@ -74,13 +74,24 @@ body html{
 /***************/
 /*** SECTION ***/
 /***************/
-.img_expo{
-  width: 100%;
-}
 .articles{
   cursor: pointer;
   background: papayawhip;
   margin: 0px;
   padding: 5px;
+  height: 200px;
+  text-align: center;
+}
+.img_expo{
+  height: 70%;
+  margin: 5px 0 15px;
+}
+.nomfrom{
+  margin: 0;
+  padding: 0;
+  font-size: 22px;
+}
+.prix{
+  padding: 2px 0;
 }
 /*** FIN SECTION ***/

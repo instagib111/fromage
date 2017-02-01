@@ -24,4 +24,5 @@ session_start();
 if (!isset($_SESSION['admin']))
 	$_SESSION["admin"] = false;
 
+$BASE_URL = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 ?>
