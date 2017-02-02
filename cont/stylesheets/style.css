@@ -114,6 +114,7 @@ body html{
 .childDPanier{
   margin: 5px;
   background: #fce7b0;
+  cursor: pointer;
 }
 #lblTitrePanier{
   text-align: center;
@@ -144,6 +145,9 @@ body html{
 /***************/
 /*** SECTION ***/
 /***************/
+#secArticle{
+  padding: 30px 0;
+}
 .articles{
   cursor: pointer;
   background: papayawhip;
@@ -183,3 +187,21 @@ body html{
   margin: 0 auto;
 }
 /*** FIN SECTION ***/
+
+/**************/
+/*** FOOTER ***/
+/**************/
+#foot{
+  background: ivory;
+}
+.foodi{
+  margin: 10px 0;
+  height: 100px;
+  background: -moz-linear-gradient(top, rgba(255, 242, 188, 0.7) 0%, rgba(0,0,0,0) 100%);
+  background: -webkit-linear-gradient(top, rgba(255, 242, 188, 0.7) 0%,rgba(0,0,0,0) 100%);
+  background: linear-gradient(to bottom, rgba(255, 242, 188, 0.7) 0%,rgba(0,0,0,0) 100%);
+  box-shadow: 0px 0px 24px #E4E4E4;
+  color: grey;
+  padding: 10px;
+}
+/*** FIN FOOTER ***/
