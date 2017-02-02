@@ -37,6 +37,7 @@ body html{
 }
 #baniere{
   overflow: hidden;
+  max-height: 170px;
 }
 #titre{
   text-align: center;
@@ -50,11 +51,11 @@ body html{
 }
 #fb{
   float: right;
-  margin-bottom: -30px;
+  margin-bottom: -40px;
 }
 #nav{
   margin-top: -20px;
-  height: 30px;
+  padding: 0;
 }
 .cat{
   font-size: 19px;
@@ -65,9 +66,13 @@ body html{
   -o-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
   height: 100%;
+  padding: 0;
+  line-height: 1.42857143;
+  background-color: #FFEFC6;
+  border: 1px solid #e9e899;
 }
 .cat:hover{
-  background-color: rgba(100,100,100,0.3);
+  background-color: #FFDD87;
 }
 /*** FIN HEADER ***/
 
@@ -100,6 +105,7 @@ body html{
   line-height: 1.42857143;
   background-color: #ffffd9;
   border: 1px solid #e9e899;
+  box-shadow: 0px 0px 10px #edd088;
 }
 #prixTTC{
   margin: 7px 0;

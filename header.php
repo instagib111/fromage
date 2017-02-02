@@ -11,12 +11,12 @@
 		</a>
 	</div>
 	<nav class="row">
-		<ul class="nav navbar-nav col-md-push-1 col-md-10 col-push-xs-0 col-xs-12" id="nav">
-			<li id="lVache" data-value="1" class="cat col-md-3 col-xs-3">Lait de vache</li>
-			<li id="lChevre" data-value="2" class="cat col-md-3 col-xs-3">Lait de chèvre</li>
-			<li id="lBrebis" data-value="3" class="cat col-md-3 col-xs-3">Lait de brebis</li>
-			<li id="vins" data-value="4" class="cat col-md-1 col-xs-1">Vins</li>
-			<li id="plateaux" data-value="5" class="cat col-md-2 col-xs-2">Plateaux</li>
+		<ul class="nav navbar-nav m0 col-lg-push-2 col-lg-8 col-md-push-1 col-md-10 col-push-xs-0 col-xs-12" id="nav">
+			<li id="lVache" data-value="1" class="cat col-sm-3 col-xs-4">Lait de vache</li>
+			<li id="lChevre" data-value="2" class="cat col-sm-3 col-xs-4">Lait de chèvre</li>
+			<li id="lBrebis" data-value="3" class="cat col-sm-3 col-xs-4">Lait de brebis</li>
+			<li id="vins" data-value="4" class="cat col-sm-1 col-xs-6">Vins</li>
+			<li id="plateaux" data-value="5" class="cat col-sm-2 col-xs-6">Plateaux</li>
 		</ul>
 	</nav>
 </header>

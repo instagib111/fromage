@@ -11,12 +11,13 @@
 			$r = $d->fetchAll();
 
 			foreach ($r as $key => $value) {
-				echo "<li class='lnkSlider' data-value='". $value['id_fromage'] ."' >
-								<img src='" . $value['image'] . "' alt='". $value['nom'] ."'/>
-								<div>
-									<h3>".$value['nom']."</h3>
-									<span class='text'>". $value['description'] ."</span>
-									<span></span>
+				echo "<li class='lnkSlider row' data-value='". $value['id_fromage'] ."' >
+								<div class='col-xs-6'>
+									<img src='" . $value['image'] . "' alt='". $value['nom'] ."'/>
+								</div>
+								<div class='col-xs-6'>
+									<h3 class='col-xs-12'>".$value['nom']."</h3>
+									<span class='text col-xs-12'>". $value['description'] ."</span>
 								</div>
 							</li>";
 			}
