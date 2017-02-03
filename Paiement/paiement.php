@@ -4,27 +4,19 @@
 <?php require_once("../admin/connexionBDD.php"); ?>
 <body>
 <?php include('../header.php');
-var_dump(empty($_POST["nom"]) .  isset($_POST["nom"]) .  ctype_space($_POST["nom"]) .
-		empty($_POST["prenom"]) .  isset($_POST["prenom"]) .  ctype_space($_POST["prenom"]) .
-		empty($_POST["email"]) .  isset($_POST["email"]) .  ctype_space($_POST["email"]) .
-		empty($_POST["confirm"]) .  isset($_POST["confirm"]) .  ctype_space($_POST["confirm"]) .
-		empty($_POST["adresseF"]) .  isset($_POST["adresseF"]) .  ctype_space($_POST["adresseF"]) .
-		empty($_POST["villeF"]) .  isset($_POST["villeF"]) .  ctype_space($_POST["villeF"]) .
-		empty($_POST["codePostalF"]) .  isset($_POST["codePostalF"]) .  ctype_space($_POST["codePostalF"]) .
-		empty($_POST["paysF"]) .  isset($_POST["paysF"]) .  ctype_space($_POST["paysF"]));
 
-if (empty($_POST["nom"]) || isset($_POST["nom"]) || ctype_space($_POST["nom"]) ||
-		empty($_POST["prenom"]) || isset($_POST["prenom"]) || ctype_space($_POST["prenom"]) ||
-		empty($_POST["email"]) || isset($_POST["email"]) || ctype_space($_POST["email"]) ||
-		empty($_POST["confirm"]) || isset($_POST["confirm"]) || ctype_space($_POST["confirm"]) ||
-		empty($_POST["adresseF"]) || isset($_POST["adresseF"]) || ctype_space($_POST["adresseF"]) ||
-		empty($_POST["villeF"]) || isset($_POST["villeF"]) || ctype_space($_POST["villeF"]) ||
-		empty($_POST["codePostalF"]) || isset($_POST["codePostalF"]) || ctype_space($_POST["codePostalF"]) ||
-		empty($_POST["paysF"]) || isset($_POST["paysF"]) || ctype_space($_POST["paysF"]) ) {
-			$_SESSION["unconfirm"] = 3;
-			//header('Location: ../Paiement/coordonnees');
-			//die();
-		}
+//if (empty($_POST["nom"]) || isset($_POST["nom"]) || ctype_space($_POST["nom"]) ||
+//		empty($_POST["prenom"]) || isset($_POST["prenom"]) || ctype_space($_POST["prenom"]) ||
+//		empty($_POST["email"]) || isset($_POST["email"]) || ctype_space($_POST["email"]) ||
+//		empty($_POST["confirm"]) || isset($_POST["confirm"]) || ctype_space($_POST["confirm"]) ||
+//		empty($_POST["adresseF"]) || isset($_POST["adresseF"]) || ctype_space($_POST["adresseF"]) ||
+//		empty($_POST["villeF"]) || isset($_POST["villeF"]) || ctype_space($_POST["villeF"]) ||
+//		empty($_POST["codePostalF"]) || isset($_POST["codePostalF"]) || ctype_space($_POST["codePostalF"]) ||
+//		empty($_POST["paysF"]) || isset($_POST["paysF"]) || ctype_space($_POST["paysF"]) ) {
+//			$_SESSION["unconfirm"] = 3;
+//			//header('Location: ../Paiement/coordonnees');
+//			//die();
+//		}
 
 if (isset($_COOKIE['panier']) && $_COOKIE['panier'] != null ) { // si le cookie existe
 	if(!isset($_POST["next"])){
