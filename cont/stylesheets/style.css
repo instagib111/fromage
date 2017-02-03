@@ -31,6 +31,34 @@ body html{
 /*** BOOTSTRAP ***/
 
 /**************/
+/*** HEADER PARNER ***/
+/**************/
+.ulRecap{
+  padding: 10px 0;
+}
+.cel{
+  background: #FBEECC;
+  border: 1px solid #FFD976;
+  /*box-shadow: 0 0 21px #FFE6A4;*/
+}
+.op{
+  background: #FCE7B0;
+  border: 1px solid #FFD976;
+  box-shadow: 0 0 21px #FFE6A4;
+}
+.num{
+  height: 100%;
+  width: 20px;
+  text-align: center;
+  border-radius: 50%;
+  background: #FAEBD7;
+}
+.txt{
+  text-align: center;
+}
+/*** FIN HEADER PANIER***/
+
+/**************/
 /*** HEADER ***/
 /**************/
 #header{
@@ -52,6 +80,7 @@ body html{
 #fb{
   float: right;
   margin-bottom: -40px;
+  margin-right: 20px;
 }
 #nav{
   margin-top: -20px;
@@ -76,11 +105,9 @@ body html{
 }
 /*** FIN HEADER ***/
 
-/*************/
-/*** ASIDE ***/
-/*************/
-
-/* top article */
+/*******************/
+/*** top article ***/
+/*******************/
 #topArticle{
   padding: 5px;
   background: #fce7b0;
@@ -110,7 +137,13 @@ body html{
 #prixTTC{
   margin: 7px 0;
 }
-/* fin top article */
+/***********************/
+/*** fin top article ***/
+/***********************/
+
+/*************/
+/*** ASIDE ***/
+/*************/
 #panier{
   background: #fbeecc;
 }
@@ -149,7 +182,7 @@ body html{
 .infos{
   padding: 0 0 4px 0px;
 }
-/*** FIN SECTION ***/
+/*** FIN ASIDE ***/
 
 /***************/
 /*** SECTION ***/
