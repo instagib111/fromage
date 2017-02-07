@@ -207,9 +207,10 @@ body html{
   padding: 0;
   margin: 0;
   background-color: #fce7b0;
+  box-shadow: 0 0 10px #ffdf83;
 }
 .img_expo{
-  height: 77%;
+  height: 65%;
   margin: 5px 0 15px;
   padding: 4px;
   line-height: 1.42857143;
