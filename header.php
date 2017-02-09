@@ -1,16 +1,17 @@
 <div id="container">
 <header id="header" class="row">
-	<div class="" id="baniere">
-		<a id="lnkTitre" href="<?php echo $BASE_URL ?>">
-			<img class="ban center-block" src="http://www.scout-eea.org/wp-content/themes/scout-eea/images/headers/eea16.jpg" alt="banière" />
-			<h1 id="titre" >Tout est bon dans le <i>Frometon</i>
-				<a id="fb" target="_blank" href="https://www.facebook.com/La-Fromagerie-1517997551795188/?fref=ts">
-					<img src="<?php echo $BASE_URL ?>cont/icon/facebook.png" alt="fB">
-				</a>
-			</h1>
-		</a>
+	<div class="col-xs-12" id="baniere">
+		<div class="divBan col-xs-12 col-md-push-1 col-md-10 col-lg-push-2 col-lg-8">
+			<a id="fb" target="_blank" href="https://www.facebook.com/La-Fromagerie-1517997551795188/?fref=ts">
+				<img src="<?php echo $BASE_URL ?>cont/icon/facebook.png" alt="fB">
+			</a>
+			<a id="lnkTitre" href="<?php echo $BASE_URL ?>">
+				<!--<img class="ban center-block" src="http://www.scout-eea.org/wp-content/themes/scout-eea/images/headers/eea16.jpg" alt="banière" />-->
+				<h1 id="titre" >Tout est bon dans le <i>Frometon</i></h1>
+			</a>
+		</div>
 	</div>
-	<nav class="row">
+	<nav class="col-xs-12">
 		<ul class="nav navbar-nav m0 col-lg-push-2 col-lg-8 col-md-push-1 col-md-10 col-push-xs-0 col-xs-12" id="nav">
 			<li id="lVache" data-value="1" class="cat col-sm-3 col-xs-4">Lait de vache</li>
 			<li id="lChevre" data-value="2" class="cat col-sm-3 col-xs-4">Lait de chèvre</li>

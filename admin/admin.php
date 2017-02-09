@@ -1,11 +1,9 @@
+<?php require_once("connexionBDD.php"); ?>
 <!DOCTYPE html>
 <html lang="fr">
 <?php include_once("head.php"); ?>
 <body>
 <?php include_once("../header.php");
-//connexion var $conn
-require_once("connexionBDD.php");
-
 // si je ne suis pas connecté, je suis renvoyé vers la page de connexion.
 if(!$_SESSION["admin"]){
 	header('Location: connexionAdmin');

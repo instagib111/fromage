@@ -1,13 +1,10 @@
+<?php require_once("connexionBDD.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 <?php include_once("head.php") ?>
 <body>
 
-<?php include_once("../header.php") ?>
-
-<?php 
-require_once("connexionBDD.php");
-
+<?php include_once("../header.php");
 
 // Deconnexion de l'utilisateur
 if(isset($_GET['action']) && $_GET['action'] == 'deconnexion'){
@@ -15,7 +12,6 @@ if(isset($_GET['action']) && $_GET['action'] == 'deconnexion'){
 	session_destroy();
 	header('location:connexionAdmin.php');
 }
-
 
 //est ce que je viens de me déconnecter?
 if(isset($_GET['deco']) && $_GET['deco'] == "un"){
@@ -50,16 +46,11 @@ if(isset($_POST["g-recaptcha-response"]) && isset($_POST["pseudo"]) && isset($_P
             $_SESSION["admin"] = true;
             $_SESSION['pseudo'] = $_POST['pseudo'];
         
-            echo '<script type="text/javascript">window.location = "admin";</script>';
+            header('Location: admin');
+            die();
         }
     }
 }
-
-$reCaptcha = new ReCaptcha($secret);
-if(isset($_POST["g-recaptcha-response"])) {
-
-}
-
 
 // ------- Affichage de l'HTML --------------
 ?>

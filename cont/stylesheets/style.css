@@ -65,18 +65,17 @@ body html{
 /**************/
 /*** HEADER ***/
 /**************/
-#header{
-}
 #baniere{
   overflow: hidden;
   max-height: 170px;
 }
+.divBan {
+  padding: 50px 0;
+}
 #titre{
   text-align: center;
-  position: relative;
-  top: -100px;
   color: cornsilk;
-  margin-bottom: -40px;
+  margin: 10px 0;
 }
 #lnkTitre{
   color: cornsilk;
@@ -141,9 +140,61 @@ body html{
 #prixTTC{
   margin: 7px 0;
 }
-/***********************/
 /*** fin top article ***/
-/***********************/
+
+/**************/
+/*** SLIDER ***/
+/**************/
+.carousel{
+  background: #FCE7B0;
+}
+.item{
+  max-width: 100%;
+  max-height: 100%;
+  padding: 0;
+}
+.lnkSlider{
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 300px;
+  background: #FFE8AC;
+  color: #803200;
+  text-align: center;
+  padding: 10px 0;
+}
+.carousel-inner{
+  height: 300px;
+}
+.carDivImg{
+  max-width: 100%;
+  max-height: 100%;
+}
+.carouselImg{
+  height: 280px;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 5px;
+  line-height: 1.42857143;
+  background-color: #ffffd9;
+  border: 1px solid #e9e899;
+}
+.carousel-control{
+  background-image: none !important;
+}
+.dot{
+  border: 1px solid #6B6B6B !important;
+}
+.active{
+  background-color: #6B6B6B !important;
+}
+.text{
+  text-align: justify;
+}
+
+
+/*** FIN SLIDER ***/
 
 /*************/
 /*** ASIDE ***/

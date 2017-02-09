@@ -1,7 +1,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Comté sur nous! - Admin</title>
-	<meta name="description" content="Je vends du fromage de chèvre">
+	<meta name="description" content="Vente de fromages!">
 	<!-- récupère les dimmenssions css des périfériques -->
 	<meta name="viewport" content="width=device-width" />
 	<!-- [if lt IE 9] >
