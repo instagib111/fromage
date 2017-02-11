@@ -189,6 +189,7 @@ $(function() {
 		var day = t.getDate();
 		var month = t.getMonth() + 1;
 		var year = t.getFullYear();
+		var that = this;
 		if(statut == 0 || statut == 1){
 			$.ajax({
 				method: "POST",
@@ -196,20 +197,22 @@ $(function() {
 				data: { idCommande: id,
 						statut: statut,
 						btn: 1
-					  }
+					  },
+				success: function (){
+					if(statut == "0"){
+						$("#l" + id).attr('class', 'statut1');
+						$("#l" + id).data('statut', 1);
+						$("#l" + id).attr('data-statut', '1');
+						$(that).html((day<10 ? '0' : '') + day +"/"+ (month<10 ? '0' : '') + month +"/" + year);
+					}
+					else if(statut == "1"){
+						$("#l" + id).attr('class', 'statut0');
+						$("#l" + id).data('statut', 0);
+						$("#l" + id).attr('data-statut', '0');
+						$(that).html("ENVOYER");
+					}
+				}
 			});
-			if(statut == "0"){
-				$("#l" + id).attr('class', 'statut1');
-				$("#l" + id).data('statut', 1);
-				$("#l" + id).attr('data-statut', '1');
-				$(this).html((day<10 ? '0' : '') + day +"/"+ (month<10 ? '0' : '') + month +"/" + year);
-			}
-			else if(statut == "1"){
-				$("#l" + id).attr('class', 'statut0');
-				$("#l" + id).data('statut', 0);
-				$("#l" + id).attr('data-statut', '0');
-				$(this).html("ENVOYER");
-			}
 		}
 	});
 	$(".btn_recue").click(function(event) {
@@ -219,6 +222,7 @@ $(function() {
 		var day = t.getDate();
 		var month = t.getMonth() + 1;
 		var year = t.getFullYear();
+		var that = this;
 		if(statut == 1 || statut == 2){
 			$.ajax({
 				method: "POST",
@@ -226,20 +230,22 @@ $(function() {
 				data: { idCommande: id,
 						statut: statut,
 						btn: 2
-					  }
+					  },
+				success: function (){
+					if(statut == "1"){
+						$("#l" + id).attr('class', 'statut2');
+						$("#l" + id).data('statut', 2);
+						$("#l" + id).attr('data-statut', '2');
+						$(that).html((day<10 ? '0' : '') + day +"/"+ (month<10 ? '0' : '') + month +"/" + year);
+					}
+					else if(statut == "2"){
+						$("#l" + id).attr('class', 'statut1');
+						$("#l" + id).data('statut', 1);
+						$("#l" + id).attr('data-statut', '1');
+						$(that).html("REÇUE");
+					}
+				}
 			});
-			if(statut == "1"){
-				$("#l" + id).attr('class', 'statut2');
-				$("#l" + id).data('statut', 2);
-				$("#l" + id).attr('data-statut', '2');
-				$(this).html((day<10 ? '0' : '') + day +"/"+ (month<10 ? '0' : '') + month +"/" + year);
-			}
-			else if(statut == "2"){
-				$("#l" + id).attr('class', 'statut1');
-				$("#l" + id).data('statut', 1);
-				$("#l" + id).attr('data-statut', '1');
-				$(this).html("REÇUE");
-			}
 		}
 	});
 });

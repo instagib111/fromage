@@ -338,9 +338,10 @@ body html{
 /*************/
 /*** ADMIN ***/
 /*************/
-#btn_commande{
+#btn_commande, #btn_produit{
   margin: 15px;
 }
+/** produit **/
 .tab{
   padding: 20px;
 }
@@ -367,6 +368,17 @@ body html{
 .status1{
   background: #D9534F !important;
 }
+/** commande **/
+.statut0{
+  background: rgba(255,0,0,.1)
+}
+.statut1{
+  background: rgba(0,0,255,.1)
+}
+.statut2{
+  background: rgba(0,255,0,.1);
+}
+
 /**************/
 /*** FOOTER ***/
 /**************/
