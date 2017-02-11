@@ -199,6 +199,9 @@ body{
 /*************/
 /*** ASIDE ***/
 /*************/
+#panier{
+  margin-top: 20px;
+}
 #inPanier{
   background: #fbeecc;
 }
