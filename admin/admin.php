@@ -1,7 +1,7 @@
 <?php require_once("connexionBDD.php"); ?>
 <!DOCTYPE html>
 <html lang="fr">
-<?php include_once("head.php"); ?>
+<?php include_once("../head.php"); ?>
 <body>
 <?php include_once("../header.php");
 // si je ne suis pas connecté, je suis renvoyé vers la page de connexion.
@@ -106,88 +106,104 @@ $donnees->execute();
 $res = $donnees->fetchAll();
 
 //AFICHAGE DE LA BDD ?>
-<div id="backOffice">
-	
-<form action="commandes" methode="post">
-	<button id="btn_commande" class="btn">Commande(s)</button>
-</form>
+<div id="backOffice" class="row">
+	<div class="tab col-lg-push-2 col-lg-8 col-md-push-1 col-md-10 col-push-xs-0 col-xs-12">
+		<form action="commandes" methode="post" class="col-xs-12">
+			<button id="btn_commande" class="btn btn-primary">Accéder à mes commandes</button>
+		</form>
 
-<table id="data">
-<thead>
-	<tr>
-		<th>ID</th><th>NOM</th><th>CATEGORIE</th><th>PRIX</th><th>DESCRIPTION</th><th>IMAGE</th><th>SLIDER</th><th>MODIF.</th><th>SUPP.</th>
-	</tr>
-</thead>
-<tbody>	
-	<?php 
-	foreach ($res as $key => $value) {
-		echo "<tr id='l".$value['id_fromage']."' class='status".$value['supp']."'>";
-		for ($i=0; $i < sizeof($value)/2 ; $i++) {
-			if($i == 5) {echo "<td><img src='".$value[$i]."' alt='Image' style='width:50px; height:50px;'></td>";}//affichage de l'image
-			else if ($i == 3){echo "<td>". $value[$i] ."€</td>";} //affichage du prix
-			else if ($i == 4){echo "<td class='descri'>". $value[$i] ."</td>";}	// affichage description
-			else if ($i == 6){/*rien*/} // affichage du status
-			else if ($i == 7){echo "<td><button class='btn_slider' data-stat='".$value[$i]."' data-id='".$value['id_fromage']."'>". ($value[$i] == 1 ? "OUI" : "NON") ."</button></td>";} // bool pour afficher le produit dans le slider ou non slider
-			else {echo "<td>". $value[$i] ."</td>";}// affichage du reste
-				
-		}
-		$dataValeur = '{"id_fromage" : "'.$value['id_fromage'].'","nom" : "'.str_replace("'", "’",$value['nom']).'","categorie" : "'.str_replace("'", "’",$value['categorie']).'","prixKg" : "'.str_replace(",", ".",$value['prixKg']).'","description" : "'.str_replace("'", "’",$value['description']).'","image" : "'.$value['image'].'" }';
+		<table id="data" class="table table-striped">
+		<thead>
+			<tr>
+				<th>ID</th><th>NOM</th><th>CATEGORIE</th><th>PRIX</th><th>DESCRIPTION</th><th>IMAGE</th><th>SLIDER</th><th>MODIF.</th><th>SUPP.</th>
+			</tr>
+		</thead>
+		<tbody>	
+			<?php 
+			foreach ($res as $key => $value) {
+				echo "<tr id='l".$value['id_fromage']."' class='status".$value['supp']."'>";
+				for ($i=0; $i < sizeof($value)/2 ; $i++) {
+					if ($i == 0){echo "<th scope='row'>". $value[$i] ."</th>";} //affichage de l'id
+					else if ($i == 3){echo "<td>". $value[$i] ."€</td>";} //affichage du prix
+					else if ($i == 4){echo "<td class='descri'>". $value[$i] ."</td>";}	// affichage description
+					else if ($i == 5){echo "<td><img src='".$value[$i]."' alt='Image' style='width:50px; height:50px;'></td>";}//affichage de l'image
+					else if ($i == 6){/*rien*/} // affichage du status
+					else if ($i == 7){echo "<td><button class='btn_slider btn ". ($value[$i] == 1 ? "btn-info" : "btn-danger") ."' data-stat='".$value[$i]."' data-id='".$value['id_fromage']."'>". ($value[$i] == 1 ? "OUI" : "NON") ."</button></td>";} // bool pour afficher le produit dans le slider ou non slider
+					else {echo "<td>". $value[$i] ."</td>";}// affichage du reste
+						
+				}
+				$dataValeur = '{
+									"id_fromage" : "'.$value['id_fromage'].'",
+									"nom" : "'.str_replace("'", "’",$value['nom']).'",
+									"categorie" : "'.str_replace("'", "’",$value['categorie']).'",
+									"prixKg" : "'.str_replace(",", ".",$value['prixKg']).'",
+									"description" : "'.str_replace("'", "’",$value['description']).'",
+									"image" : "'.$value['image'].'" 
+								}';
 
-		echo '<td><span class="lnkModifier glyphicon glyphicon-pencil" data-valeur=\''.$dataValeur.'\'></span></td>';
-		if(!$value['supp'])/* si status est à 0 */
-			{echo '<td><span class="lnkSuppReta glyphicon glyphicon-remove" data-stat="0" data-valeur="'.$value['id_fromage'].'"></span></td>';}
-		else /* si status n'est pas à 0*/
-			{echo '<td><span class="lnkSuppReta glyphicon glyphicon-repeat" data-stat="1" data-valeur="'.$value['id_fromage'].'"></span></td>';}
+				echo '<td><span class="lnkModifier btn btn-warning glyphicon glyphicon-pencil" data-valeur=\''.$dataValeur.'\'></span></td>';
+				if(!$value['supp'])/* si status est à 0 */
+					echo '<td><span class="lnkSuppReta btn btn-danger glyphicon glyphicon-remove" data-stat="0" data-valeur="'.$value['id_fromage'].'"></span></td>';
+				else
+					echo '<td><span class="lnkSuppReta btn btn-warning glyphicon glyphicon-repeat" data-stat="1" data-valeur="'.$value['id_fromage'].'"></span></td>';
 
-		echo "</tr>";
-	}
-	?>
-</tbody>
-</table>
+				echo "</tr>";
+			}
+			?>
+		</tbody>
+		</table>
 
 
-<?php //AJOUT MODIFIER Formulaire ?>
+		<?php //AJOUT MODIFIER Formulaire ?>
 
-<form action="" class="formAdd" method="post">
-	
-	<h3 id="titreForm">Modification d'un fromage</h3>
-	<div id="cross" class="glyphicon glyphicon-remove"></div>
-	<label id="ident" for="id_fromage">id du fromage : <span id="idFromage" ></span></label>
-	<input name="id_fromage" id="id_fromage" type="hidden" min="1" max="<?php echo sizeof($res); ?>">
-	<div id="dnom">
-		<label for="nom">Nom :</label>
-		<input name="nom" id="nom" required="required" type="text">
-		
-		<label for="categorie">Catégorie :</label>
-		<select name="categorie" id="categorie">
-			<option value="lait de vache">lait de vache</option>
-			<option value="lait de chèvre">lait de chèvre</option>
-			<option value="lait de brebis">lait de brebis</option>
-			<option value="vins">vins</option>
-			<option value="plateaux">plateaux</option>
-		</select>
-		<label for="prixKg">Prix /kg :</label>
-		<input name="prixKg" id="prixKg" required="required" type="text">
+		<form action="" class="formAdd col-xs-12" method="post">
+			
+			<div id="cross" class="btn btn-warning glyphicon glyphicon-remove"></div>
+			<h3 id="titreForm" class="tac col-xs-12">Modification d'un fromage</h3>
+			<div class="col-xs-12 tac">
+				<label id="ident" for="id_fromage">id du fromage : <span id="idFromage" ></span></label>
+				<input name="id_fromage" id="id_fromage" type="hidden" min="1" max="<?php echo sizeof($res); ?>">
+			</div>
+			<div id="dnom" class="col-xs-12">
+				<div class="m0 col-sm-4 col-xs-12">
+					<label class="col-xs-6" for="nom">Nom :</label>
+					<input class="col-xs-6" name="nom" id="nom" required="required" type="text">
+				</div>
+				<div class="m0 col-sm-4 col-xs-12">
+					<label class="col-xs-6" for="categorie">Catégorie :</label>
+					<select class="col-xs-6" name="categorie" id="categorie">
+						<option value="lait de vache">lait de vache</option>
+						<option value="lait de chèvre">lait de chèvre</option>
+						<option value="lait de brebis">lait de brebis</option>
+						<option value="vins">vins</option>
+						<option value="plateaux">plateaux</option>
+					</select>
+				</div>
+				<div class="m0 col-sm-4 col-xs-12">
+					<label class="col-xs-6" for="prixKg">Prix /kg :</label>
+					<input class="col-xs-6" name="prixKg" id="prixKg" required="required" type="text">
+				</div>
+			</div>
+			
+			<div id="ddescri" class="col-xs-12 tac">
+				<label class="col-xs-12" for="description">Description :</label>
+				<textarea class="col-xs-12" rows="5" cols="80" name="description" id="description" required="required"></textarea>
+			</div>
+
+			<div id="dimage" class="col-xs-12">
+				<label class="col-xs-3" for="image">Image :</label>
+				<input class="col-xs-9" name="image" id="image" required="required" type="text">
+			</div>
+			<div id="btnAddMod" class="col-xs-12 tac">
+				<input class="btn btn-success" id="subAjMo" type="submit" value="Ajouter/Modifier"/> 
+			</div>
+		</form>
+
+		<div id="end" class="col-xs-12">
+			<a href="deco.php" class="btnDeco btn btn-danger">Déconnexion</a>
+			<button id="addFromage" class="btn btn-primary">Ajouter un produit</button>
+		</div>
 	</div>
-	
-	<div id="ddescri">
-		<label for="description">Description :</label>
-		<textarea rows="5" cols="80" name="description" id="description" required="required"></textarea>
-	</div>
-
-	<div id="dimage">
-		<label for="image">Image :</label>
-		<input name="image" id="image" required="required" type="text">
-	</div>
-
-	<input id="subAjMo" type="submit" value="Ajouter/Modifier"/> 
-</form>
-
-</div>
-
-<div id="end">
-	<a href="deco.php" class="btnDeco">Déconnexion</a>
-	<button id="addFromage">Ajouter un produit</button>
 </div>
 
 <?php include_once("../footer.php") ?>

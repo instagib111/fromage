@@ -17,46 +17,49 @@ $(function() {
 	    modifier(t.id_fromage, t.nom, t.categorie, t.prixKg, t.description, t.image);
 	    $("#subAjMo").val('Modifier');
 	    $("#titreForm").html("Modification d'un fromage");
-	    $("#ident").show();
-	    $(".formAdd").css('height', '350px');
-	    $(".formAdd").show(1000);
-	    $("#addFromage").hide();
-	    $("html, body").animate({ scrollTop: $(document).height() }, 1000);
+	    $("#ident").slideDown();
+	    $(".formAdd").slideDown(500);
+	    $("#addFromage").slideUp();
+	    $("html, body").animate({ scrollTop: $(document).height() }, 500);
 	});
 
 	$("#cross").click(function(event) {
-		$(".formAdd").hide(1000);
-	    $("#addFromage").show();
+		$(".formAdd").slideUp(500);
+	    $("#addFromage").slideDown();
 	});
 
 	$("#addFromage").click(function(event) {
 		modifier("","","","","","");
 	    $("#titreForm").html("Ajout d'un fromage");
 	    $("#subAjMo").val('Ajouter');
-	    $("#ident").hide();
-    	$("#addFromage").hide(200);
-	    $(".formAdd").css('height', '330px');
-	    $(".formAdd").show(1000);
-	    $("html, body").animate({ scrollTop: $(document).height() }, 1000);
+	    $("#ident").slideUp();
+    	$("#addFromage").slideUp(200);
+	    $(".formAdd").slideDown(500);
+	    $("html, body").animate({ scrollTop: $(document).height() }, 500);
 	});;
 
 	$(".lnkSuppReta").click(function(event) {
 		var v = $(this).data('valeur');
 		var s = $(this).data('stat');
+		var that = this;
 		$.ajax({
 			method: "POST",
 			url: "../admin/admin.php",
 			data: { idSupp: v,
 					stat: s
-				  }
+				  },
+			success: function (){
+				if(s == 0){
+					$(that).removeClass('glyphicon-remove').addClass('glyphicon-repeat').data('stat',1);
+					$(that).removeClass('btn-danger').addClass('btn-warning');
+					$("#l" + v).attr('class', 'status1');
+				} else {
+					$(that).removeClass('glyphicon-repeat').addClass('glyphicon-remove').data('stat',0);
+					$(that).removeClass('btn-warning').addClass('btn-danger');
+					$("#l" + v).attr('class', 'status0');
+				}
+			}
 		});
-		if(s == 0){
-			$(this).removeClass('glyphicon-remove').addClass('glyphicon-repeat').data('stat',1);
-			$("#l" + v).attr('class', 'status1');
-		} else {
-			$(this).removeClass('glyphicon-repeat').addClass('glyphicon-remove').data('stat',0);
-			$("#l" + v).attr('class', 'status0');
-		}
 	});
 
 	$(".articles").click(function(event) {
@@ -68,19 +71,23 @@ $(function() {
 	$(".btn_slider").click(function(event) {
 		var stat = $(this).data('stat');
 		var id = $(this).data('id');
+		var that = this;
 		$.ajax({
 			method: "POST",
 			url: "../admin/admin.php",
 			data: { idSlider: id,
 					stat: stat
-				  }
+				  },
+			success: function (){
+				if (stat == 0){
+					$(that).data('stat', 1).html("OUI");
+					$(that).removeClass('btn-danger').addClass('btn-info');
+				} else {
+					$(that).data('stat', 0).html("NON");
+					$(that).removeClass('btn-info').addClass('btn-danger');
+				}
+			}
 		});
-		if (stat == 0){
-			$(this).data('stat', 1).html("OUI");
-		} else {
-			$(this).data('stat', 0).html("NON");
-		}
-
 	});
 
 	/*********************************/
@@ -146,7 +153,7 @@ $(function() {
 	/*****************/
 	$("#same").change(function(event) {
 		if($(this).is(':CHECKED')){
-			$("#adresseFacturation").show(100);
+			$("#adresseFacturation").slideDown(100);
 			$("#adresseLivraison").hide(100);
 			$("#adresseL").removeAttr('required');
 			$("#villeL").removeAttr('required');
@@ -156,8 +163,8 @@ $(function() {
 	});
 	$("#notsame").change(function(event) {
 		if($(this).is(':CHECKED')){
-			$("#adresseFacturation").show(100);
-			$("#adresseLivraison").show(100);
+			$("#adresseFacturation").slideDown(100);
+			$("#adresseLivraison").slideDown(100);
 			$("#adresseL").attr('required','required');
 			$("#villeL").attr('required','required');
 			$("#codePostalL").attr('required','required');

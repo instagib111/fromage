@@ -31,11 +31,10 @@ body html{
 .btn-success{
   font-weight: bold;
 }
-/*** BOOTSTRAP ***/
 
-/**************/
+/*********************/
 /*** HEADER PARNER ***/
-/**************/
+/*********************/
 .ulRecap{
   padding: 10px 0;
 }
@@ -60,7 +59,6 @@ body html{
 .txt{
   text-align: center;
 }
-/*** FIN HEADER PANIER***/
 
 /**************/
 /*** HEADER ***/
@@ -106,7 +104,6 @@ body html{
 .cat:hover{
   background-color: #FFDD87;
 }
-/*** FIN HEADER ***/
 
 /*******************/
 /*** top article ***/
@@ -140,7 +137,6 @@ body html{
 #prixTTC{
   margin: 7px 0;
 }
-/*** fin top article ***/
 
 /**************/
 /*** SLIDER ***/
@@ -194,9 +190,6 @@ body html{
   padding: 0 30px;
 }
 
-
-/*** FIN SLIDER ***/
-
 /*************/
 /*** ASIDE ***/
 /*************/
@@ -238,7 +231,6 @@ body html{
 .infos{
   padding: 0 0 4px 0px;
 }
-/*** FIN ASIDE ***/
 
 /***************/
 /*** SECTION ***/
@@ -285,7 +277,6 @@ body html{
 .centered{
   margin: 0 auto;
 }
-/*** FIN SECTION ***/
 
 /**************************/
 /*** SECTION COORDONNEE ***/
@@ -299,7 +290,7 @@ body html{
 }
 #radioRow{
   margin-top: 10px;
-  margin-bottom: : 10px;
+  margin-bottom: 10px;
 }
 .radio{
   border-radius: 5px;
@@ -323,8 +314,59 @@ body html{
   padding-bottom: 10px;
   box-shadow: 0 0 12px #FCE7B0;
 }
-/*** FIN SECTION COORDONNEE ***/
 
+/***********************/
+/*** CONNEXION ADMIN ***/
+/***********************/
+.recap{
+  text-align: center;
+  padding: 15px;
+}
+.g-recaptcha{
+  display: inline-block;
+}
+.divco{
+  margin: 20px 0;
+}
+#co{
+  background: #FBEECC;
+  padding: 40px;
+}
+.lbl{
+  margin-top: 15px;
+}
+/*************/
+/*** ADMIN ***/
+/*************/
+#btn_commande{
+  margin: 15px;
+}
+.tab{
+  padding: 20px;
+}
+#data{
+  background: floralwhite;
+}
+.formAdd{
+  display: none;
+  background: #FFF7D1;
+  padding: 10px;
+  margin: 0 0 15px 0;
+}
+#cross{
+  border-radius: 0;
+  padding: 2px 4px;
+  float: right
+}
+#dnom, #ddescri, #dimage, #btnAddMod{
+  margin: 15px 0;
+}
+#addFromage{
+  float: right;
+}
+.status1{
+  background: #D9534F !important;
+}
 /**************/
 /*** FOOTER ***/
 /**************/
@@ -350,4 +392,3 @@ body html{
   max-height: 100%;
   padding: 0;
 }
-/*** FIN FOOTER ***/
