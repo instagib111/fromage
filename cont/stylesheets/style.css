@@ -184,13 +184,14 @@ body html{
   background-image: none !important;
 }
 .dot{
-  border: 1px solid #6B6B6B !important;
+  border: 1px solid rgba(0,0,0,.0) !important;
 }
 .active{
-  background-color: #6B6B6B !important;
+  background-color: rgba(0,0,0,.0) !important;
 }
 .text{
   text-align: justify;
+  padding: 0 30px;
 }
 
 
@@ -339,6 +340,10 @@ body html{
   box-shadow: 0px 0px 24px #E4E4E4;
   color: grey;
   padding: 10px;
+}
+#fooa{
+  color: grey;
+  text-decoration: none;
 }
 .fooImg{
   max-width: 100%;

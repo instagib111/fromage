@@ -13,7 +13,7 @@
 	</div>
 	<div class="col-xs-6 col-sm-4 col-md-3 col-lg-push-1 col-lg-2" id="adminBO">
 		<div class="foodi col-xs-12">
-			<span class="col-xs-8">Accèder au panel administrateur</span>
+			<span class="col-xs-8">Accèder au panel <a id="fooa" href="<?= $BASE_URL.'admin/admin' ?>">admin</a>istrateur</span>
 			<img src="<?php echo $BASE_URL ?>/cont/img/Gear" class="fooImg col-xs-4" alt="Camion" id="fooGear" />
 		</div>
 	</div>
