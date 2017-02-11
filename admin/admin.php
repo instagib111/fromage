@@ -128,7 +128,7 @@ $res = $donnees->fetchAll();
 					else if ($i == 4){echo "<td class='descri'>". $value[$i] ."</td>";}	// affichage description
 					else if ($i == 5){echo "<td><img src='".$value[$i]."' alt='Image' style='width:50px; height:50px;'></td>";}//affichage de l'image
 					else if ($i == 6){/*rien*/} // affichage du status
-					else if ($i == 7){echo "<td><button class='btn_slider btn ". ($value[$i] == 1 ? "btn-info" : "btn-danger") ."' data-stat='".$value[$i]."' data-id='".$value['id_fromage']."'>". ($value[$i] == 1 ? "OUI" : "NON") ."</button></td>";} // bool pour afficher le produit dans le slider ou non slider
+					else if ($i == 7){echo "<td><button id='btn_ON".$value['id_fromage']."' class='btn_slider btn ". ($value[$i] == 1 ? "btn-info" : "btn-danger") ."' data-stat='".$value[$i]."' data-id='".$value['id_fromage']."'>". ($value[$i] == 1 ? "OUI" : "NON") ."</button></td>";} // bool pour afficher le produit dans le slider ou non slider
 					else {echo "<td>". $value[$i] ."</td>";}// affichage du reste
 						
 				}

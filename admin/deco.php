@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
-<?php include_once("../head.php") ?>
-<body>
-<?php include_once("../header.php") 
+<?php 
 require_once("connexionBDD.php");
+include_once("../head.php"); ?>
+<body>
+<?php 
+include_once("../header.php");
 //déconnection
 $_SESSION["admin"] = false;
 

@@ -41,6 +41,7 @@ $(function() {
 	$(".lnkSuppReta").click(function(event) {
 		var v = $(this).data('valeur');
 		var s = $(this).data('stat');
+		var btnInLine = $("#btn_ON" + v);
 		var that = this;
 		$.ajax({
 			method: "POST",
@@ -49,13 +50,21 @@ $(function() {
 					stat: s
 				  },
 			success: function (){
-				if(s == 0){
-					$(that).removeClass('glyphicon-remove').addClass('glyphicon-repeat').data('stat',1);
-					$(that).removeClass('btn-danger').addClass('btn-warning');
+				if (s == 0) {
+					$(that)	.removeClass('glyphicon-remove')
+							.addClass('glyphicon-repeat')
+							.data('stat',1);
+					$(that)	.removeClass('btn-danger')
+							.addClass('btn-warning');
 					$("#l" + v).attr('class', 'status1');
+					if (btnInLine.data('stat') == 1){
+						btnInLine.click();
+					}
 				} else {
-					$(that).removeClass('glyphicon-repeat').addClass('glyphicon-remove').data('stat',0);
-					$(that).removeClass('btn-warning').addClass('btn-danger');
+					$(that)	.removeClass('glyphicon-repeat')	
+							.addClass('glyphicon-remove').data('stat',0);
+					$(that)	.removeClass('btn-warning')
+							.addClass('btn-danger');
 					$("#l" + v).attr('class', 'status0');
 				}
 			}
