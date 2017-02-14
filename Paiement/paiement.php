@@ -58,36 +58,41 @@ if (isset($_COOKIE['panier']) && $_COOKIE['panier'] != null ) { // si le cookie 
 					$_SESSION["villeL"] = $_POST["villeF"];
 					$_SESSION["paysL"] = $_POST["paysF"];
 				} ?>
-				<span class="col-xs-6">Prix Total TTC: </span><span class="col-xs-6"><?php echo number_format($_SESSION["prixTotal"], 2); ?> €</span>
+			</div>
+			<div class="diCoor col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
+				<span class="tar col-xs-6">Prix Total TTC: </span><span class="col-xs-6"><?php echo number_format($_SESSION["prixTotal"], 2); ?> €</span>
 			</div>
 		</div>
 		<div class="btnPai row">
-			<form id="before" class="col-xs-12 col-sm-6 tac" action="coordonnees" methode="post">
-				<button class="btn btn-warning" name="prec" type="submit" value="1">ETAPE PRECEDENTE</button>
-			</form>
-			<form id="paypal" class="col-xs-12 col-sm-6 tac" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
-				<input name="cmd" type="hidden" value="_xclick" />
-				<input name="amount" type="hidden" value="<?php echo $_SESSION['prixTotal'] ?>" />
-				<input name="currency_code" type="hidden" value="EUR" />
-				<input name="shipping" type="hidden" value="0.00" />
-				<input name="return" type="hidden" value="<?php echo $BASE_URL ?>Paiement/confPaypal" /><!-- si bien payé -->
-				<input name="cancel_return" type="hidden" value="<?php echo $BASE_URL ?>" /> <!-- si cancel-->
-				<input name="business" type="hidden" value="achard.christopher-facilitator@gmail.com" />
-				<input name="item_name" type="hidden" value="Votre panier" />
-				<input name="lc" type="hidden" value="FR" />
-				<input type="hidden" name="address1" value="<?php echo $_SESSION["adresseL"]; ?>" />
-				<input type="hidden" name="city" value="<?php echo $_SESSION["villeL"]; ?>" />
-				<input type="hidden" name="state" value="<?php echo $_SESSION["paysL"]; ?>">
-				<input type="hidden" name="zip" value="<?php echo $_SESSION["codePostalL"]; ?>">
-				<input type="hidden" name="email" value="<?php echo $_POST["email"]; ?>">
-				<input name="first_name" type="hidden" value="<?php echo $_POST["prenom"]; ?>">
-				<input name="last_name" type="hidden" value="<?php echo $_POST["nom"]; ?>">
-				<input type='hidden' name='bn' value='PP-BuyNowBF'>
+			<div class="diCoorBtn col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
+				<div class="col-xs-12">
+					<form id="before" class="col-xs-12 col-sm-6 tac" action="coordonnees" methode="post">
+						<button class="btn btn-warning" name="prec" type="submit" value="1">ETAPE PRECEDENTE</button>
+					</form>
+					<form id="paypal" class="col-xs-12 col-sm-6 tac" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+						<input name="cmd" type="hidden" value="_xclick" />
+						<input name="amount" type="hidden" value="<?php echo $_SESSION['prixTotal'] ?>" />
+						<input name="currency_code" type="hidden" value="EUR" />
+						<input name="shipping" type="hidden" value="0.00" />
+						<input name="return" type="hidden" value="<?php echo $BASE_URL ?>Paiement/confPaypal" /><!-- si bien payé -->
+						<input name="cancel_return" type="hidden" value="<?php echo $BASE_URL ?>" /> <!-- si cancel-->
+						<input name="business" type="hidden" value="achard.christopher-facilitator@gmail.com" />
+						<input name="item_name" type="hidden" value="Votre panier" />
+						<input name="lc" type="hidden" value="FR" />
+						<input type="hidden" name="address1" value="<?php echo $_SESSION["adresseL"]; ?>" />
+						<input type="hidden" name="city" value="<?php echo $_SESSION["villeL"]; ?>" />
+						<input type="hidden" name="state" value="<?php echo $_SESSION["paysL"]; ?>">
+						<input type="hidden" name="zip" value="<?php echo $_SESSION["codePostalL"]; ?>">
+						<input type="hidden" name="email" value="<?php echo $_POST["email"]; ?>">
+						<input name="first_name" type="hidden" value="<?php echo $_POST["prenom"]; ?>">
+						<input name="last_name" type="hidden" value="<?php echo $_POST["nom"]; ?>">
+						<input type='hidden' name='bn' value='PP-BuyNowBF'>
 
-				<button class="btn btn-success">Payer avec PayPal</button>
-			</form>
+						<button class="btn btn-success">Payer avec PayPal</button>
+					</form>
+				</div>
+			</div>
 		</div>
-
 
 <?php }//end else
 	} //end if

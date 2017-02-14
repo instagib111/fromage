@@ -11,6 +11,7 @@
 
 	<section id="secRecap" class="row">
 		<div id="panier" class="col-xs-12 col-md-push-1 col-md-10 col-lg-push-2 col-lg-8">
+			<div class="recap col-xs-12">
 		<h3 id="lblTitrePanier">VOTRE PANIER</h3>
 	<?php $cookie = unserialize($_COOKIE['panier']);
 	$total = 0;
@@ -73,15 +74,16 @@
 				<button id="btnEffacerPanier" class="btn btn-warning">EFFACER PANIER</button>
 			</form>
 			<div class="col-xs-6 col-xs-offset-3 col-sm-offset-0 col-sm-4 Totaux">
-				<span class="col-xs-9 tal">Poids Total: </span><span id="poidsTotal tar p0 col-xs-3"><?php echo $_SESSION['poidsTotal'] = $poids; ?>g</span>
-				<span class="col-xs-9 tal">Prix livraison: </span><span id="prixLivraison tar p0 col-xs-3"><?php echo $_SESSION['prixLivraison'] = number_format($prixLivraison, 2); ?>€</span>
-				<span class="col-xs-9 tal">Prix Total: </span><span id="prixTotal tar p0 col-xs-3"><?php echo $_SESSION['prixTotal'] = number_format($total, 2); ?>€</span>
+				<span class="col-xs-9 tal">Poids Total: </span><span id="poidsTotal" class="tar p0 col-xs-3"><?php echo $_SESSION['poidsTotal'] = $poids; ?>g</span>
+				<span class="col-xs-9 tal">Prix livraison: </span><span id="prixLivraison"  class="tar p0 col-xs-3"><?php echo $_SESSION['prixLivraison'] = number_format($prixLivraison, 2); ?>€</span>
+				<span class="col-xs-9 tal">Prix Total: </span><span id="prixTotal" class="tar p0 col-xs-3"><?php echo $_SESSION['prixTotal'] = number_format($total, 2); ?>€</span>
 			</div>
 			<form class="col-xs-12 col-sm-4" action="coordonnees" method="post">
 				<input type="hidden" name="confirmation" value="confirm" />
 				<button class="btn btn-success" id="next" >ETAPE SUIVANTE</button>
 			</form>
 		</div>
+	</div>
 	</div>
 	</section>
 <?php } // end if

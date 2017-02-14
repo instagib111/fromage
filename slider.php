@@ -31,7 +31,7 @@
                       <div class='carDivImg col-xs-6'>
                         <img class='carouselImg' src='" . $value['image'] . "' alt='". $value['nom'] ."'/>
                       </div>
-                      <div class='col-xs-6'>
+                      <div class='col-xs-5'>
                         <h3 class='col-xs-12'>".$value['nom']."</h3>
                         <span class='text col-xs-12'>". $value['description'] ."</span>
                       </div>

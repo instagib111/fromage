@@ -48,7 +48,7 @@ body{
   /*box-shadow: 0 0 21px #FFE6A4;*/
 }
 .op{
-  background: #FCE7B0;
+  background: #FFD76E;
   border: 1px solid #FFD976;
   box-shadow: 0 0 21px #FFE6A4;
 }
@@ -72,14 +72,28 @@ body{
 }
 .divBan {
   padding: 50px 0;
+  background-image: url('../img/bg-ban.png');
+  background-position: center top;
+  background-size: 100% auto;
+  height: 170px;
 }
 #titre{
   text-align: center;
-  color: cornsilk;
-  margin: 10px 0;
+  color: #302c1d;
+  margin: -10px 0 0 0;
+  text-shadow: 0 0 22px white;
+}
+#titre i {
+  -webkit-transform: scale(1.4) rotate(-10deg);
+  -moz-transform: scale(1.4) rotate(-10deg);
+  -o-transform: scale(1.4) rotate(-10deg);
+  display: inline-block;
+  font-style: oblique;
+  margin-left: 33px;
+  margin-bottom: 10px;
 }
 #lnkTitre{
-  color: cornsilk;
+  text-decoration: none;
 }
 #fb{
   float: right;
@@ -202,6 +216,7 @@ body{
 /*************/
 #panier{
   margin-top: 20px;
+  margin-bottom: 15px;
 }
 #inPanier{
   background: #fbeecc;
@@ -221,7 +236,6 @@ body{
 }
 .imgPan{
   height: 54px;
-  width: 69px;
   margin: 0;
   padding: 4px;
   line-height: 1.42857143;
@@ -247,6 +261,10 @@ body{
 /***************/
 #secArticle{
   padding: 30px 0;
+}
+.allArticles{
+  background: #FBEECC;
+  padding: 10px;
 }
 .articles{
   cursor: pointer;
@@ -317,18 +335,25 @@ body{
   border: 1px solid #FFBD00;
 }
 .btnPai{
-  padding: 10px;
+  padding: 10px 0;
 }
 .diCoor{
   background: #FCE7B0;
   padding-bottom: 10px;
   box-shadow: 0 0 12px #FCE7B0;
 }
+.diCoorBtn{
+  background: #FCE7B0;
+  padding: 5px;
+  box-shadow: 0 0 12px #FCE7B0;
+}
+
 
 /***********************/
 /*** CONNEXION ADMIN ***/
 /***********************/
 .recap{
+  background: #FBEECC;
   text-align: center;
   padding: 15px;
 }

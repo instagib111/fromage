@@ -1,7 +1,16 @@
-/***************/
-/**** ADMIN ****/
-/***************/
 $(function() {
+	//resize title
+	var $div = $('#divBaniere');
+	$(window).resize(function () {
+		var height = $div.height();
+		$div.css({
+			'font-size': (height/2) + 'px',
+			'line-height': height + 'px'
+		})
+	}).trigger('resize');
+	/***************/
+	/**** ADMIN ****/
+	/***************/
 	function modifier(id_fromage, nom, categorie, prixKg, description, image){
 		$('#id_fromage').val(id_fromage);
 		$('#idFromage').html(id_fromage);

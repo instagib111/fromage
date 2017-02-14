@@ -8,7 +8,7 @@
 	<div class="col-xs-6 col-sm-4 col-md-3 col-lg-push-1 col-lg-2" id="paiement">
 		<div class="foodi col-xs-12">
 			<span class="col-xs-8">Paiement sécurisé avec PayPal</span>
-			<img src="<?php echo $BASE_URL ?>/cont/img/Payment.png" class="fooImg col-xs-4" alt="paypal" id="fooPaypal" />
+			<a href="https://www.paypal.com/" ><img src="<?php echo $BASE_URL ?>/cont/img/Payment.png" class="fooImg col-xs-4" alt="paypal" id="fooPaypal" /></a>
 		</div>
 	</div>
 	<div class="col-xs-6 col-sm-4 col-md-3 col-lg-push-1 col-lg-2" id="adminBO">

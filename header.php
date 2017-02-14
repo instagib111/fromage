@@ -1,7 +1,7 @@
 <div id="container">
 <header id="header" class="row">
 	<div class="col-xs-12" id="baniere">
-		<div class="divBan col-xs-12 col-md-push-1 col-md-10 col-lg-push-2 col-lg-8">
+		<div id="divBaniere" class="divBan col-xs-12 col-md-push-1 col-md-10 col-lg-push-2 col-lg-8">
 			<a id="fb" target="_blank" href="https://www.facebook.com/La-Fromagerie-1517997551795188/?fref=ts">
 				<img src="<?php echo $BASE_URL ?>cont/icon/facebook.png" alt="fB">
 			</a>
