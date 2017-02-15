@@ -296,11 +296,11 @@ body{
   text-align: left;
 }
 .nomPrix{
-  padding: 0;
+  padding: 0 !important;
   background: #fef4d3;
 }
 .prix{
-  padding: 2px 4px 2px 0px;
+  padding: 0 !important;
 }
 .centered{
   margin: 0 auto;
