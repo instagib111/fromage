@@ -2,7 +2,7 @@
 	<?php 
 	$uri = $_SERVER['REQUEST_URI'];
 	$prefix = '';
-	$title = '';
+	$title = 'Lait de chèvre.';
 	$isInAdminFolder = strstr($uri, '/admin/');
 	$isInPaiementFolder = strstr($uri, '/Paiement/');
 
@@ -14,10 +14,17 @@
 		$prefix = '../';
 		$title = ' - Paiement';
 	}
+	if(!isset($_POST['cat'])){ $title = $cat = "lait de vache";}
+	else if($_POST['cat'] == 1) { $title = $cat = "lait de vache";}
+	else if($_POST['cat'] == 2) { $title = $cat = "lait de chèvre";}
+	else if($_POST['cat'] == 3) { $title = $cat = "lait de brebis";}
+	else if($_POST['cat'] == 4) { $title = $cat = "vins";}
+	else if($_POST['cat'] == 5) { $title = $cat = "plateaux";}
 	?>
 	<meta charset="UTF-8">
-	<title>Comté sur nous! <?= $title ?></title>
-	<meta name="description" content="Vente de fromages!">
+	<title>Comté sur nous - <?= ucfirst($title) ?></title>
+	<meta name="description" content="Venez découvrir une gamme de produit traditionnel Français. 
+	Fromage, vins, plateaux composé... Lait de chèvre, brebis ou vache sur comtesurnous.fr">
 	<!-- récupère les dimmenssions css des périfériques -->
 	<meta name="viewport" content="width=device-width" />
 	<!-->

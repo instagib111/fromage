@@ -8,6 +8,12 @@ $(function() {
 			'line-height': height + 'px'
 		})
 	}).trigger('resize');
+	/*** SLIDER ***/
+	$(".lnkSlider").click(function(event) {
+        var v = $(this).data('value');
+        $('#hiddenAttr').val(v);
+        $("#hiddenForm").submit();
+    });
 	/***************/
 	/**** ADMIN ****/
 	/***************/

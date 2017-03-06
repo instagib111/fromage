@@ -53,7 +53,7 @@
       </a>
     </div>
   </div>
-  <form id="hiddenForm" action="" method="post">
+  <form id="hiddenForm" action="" method="GET">
     <input id="hiddenAttr" name="id" type="hidden">
   </form>
 	<script src="cont/js/slider.js"></script>

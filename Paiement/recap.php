@@ -93,7 +93,7 @@ else {?>
 	</section>
 <?php } //end else ?>
 
-<form id="hidenForm" action="../index" method="post">
+<form id="hidenForm" action="../index" method="get">
 	<input id="hidenAttr" name="id" type="hidden">
 </form>
 <?php include_once("../footer.php"); ?>

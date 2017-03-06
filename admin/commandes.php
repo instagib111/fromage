@@ -57,7 +57,7 @@ $res = $d->fetchAll();
 <div id="backOffice" class="row">
 	<div class="tab col-lg-push-2 col-lg-8 col-md-push-1 col-md-10 col-push-xs-0 col-xs-12">
 		<form action="admin" methode="post" class="col-xs-12">
-			<button id="btn_produit" class="btn btn-primary">Produit(s)</button>
+			<button id="btn_produit" class="btn btn-primary">Accéder à mes produits</button>
 		</form>
 			
 		<table id="data" class="table">

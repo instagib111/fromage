@@ -11,8 +11,11 @@
 
 
 	//condition pour afficher ou non le slider
-	if (isset($_POST['id'])) {
-		$idTemp = $_POST['id'] - 1;
+	$isIdFroSet = false;
+	if (isset($_GET['id'])) {
+		$idFro = $_GET['id'];
+		$isIdFroSet = true;
+		$idTemp = $_GET['id'] - 1;
 		include('topArticle.php');
 	} else {include('slider.php');}
 
@@ -24,12 +27,6 @@
 			<div class="col-xs-12 col-md-push-1 col-md-10 col-lg-push-2 col-lg-8">
 				<div class="allArticles col-xs-12">
 					<?php
-					if(!isset($_POST['cat'])){ $cat = "lait de vache";}
-					else if($_POST['cat'] == 1) { $cat = "lait de vache";}
-					else if($_POST['cat'] == 2) { $cat = "lait de chèvre";}
-					else if($_POST['cat'] == 3) { $cat = "lait de brebis";}
-					else if($_POST['cat'] == 4) { $cat = "vins";}
-					else if($_POST['cat'] == 5) { $cat = "plateaux";}
 
 					foreach ($res as $key => $value) {
 						$produit = "<article class='articles col-md-4 col-sm-6 col-xs-12' data-valeur='". $value['id_fromage'] ."'>
@@ -41,14 +38,14 @@
 
 						//var_dump($cat == $value['categorie']);
 						//si on a un POST on regarde le param
-						if(isset($_POST['id'])){
+						if($isIdFroSet){
 							//si ça match on n'affiche pas le produit dans la liste
-							if($_POST['id'] == $value['id_fromage']){/* rien */}
+							if($idFro == $value['id_fromage']){/* rien */}
 							else if($value['supp']) {/* rien */}
 							else if($cat == $value['categorie']){echo $produit;}
 
 						// on affiche tous les produits par default
-						} else if (!isset($_POST['id'])){
+						} else {
 							if($value['supp']) {/* rien */}
 							else if($cat == $value['categorie']){echo $produit;}
 						}
@@ -57,7 +54,7 @@
 				</div>
 			</div>
 		</section>
-		<form id="hidenForm" action="" method="post">
+		<form id="hidenForm" action="" method="GET">
 			<input id="hidenAttr" name="id" type="hidden">
 		</form>
 	<?php include_once("footer.php"); ?>
